@@ -35,6 +35,21 @@ namespace ApiHttpClient
             return (res.Key != null && res.Key == header);
         }
 
+        public Cookie GetCookie(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICollection<Cookie> GetCookies()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool HasCookie(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public string GetProtocolVersion()
         {
             return _response.Version.ToString();

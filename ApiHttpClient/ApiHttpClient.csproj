@@ -45,6 +45,7 @@
     <Compile Include="ApiHttpClient.cs" />
     <Compile Include="ApiHttpClientBase.cs" />
     <Compile Include="ApiHttpClientResponse.cs" />
+    <Compile Include="Cookie.cs" />
     <Compile Include="Exceptions\StreamAlreadyReadException.cs" />
     <Compile Include="Interfaces\IResponse.cs" />
     <Compile Include="RequestMethod.cs" />

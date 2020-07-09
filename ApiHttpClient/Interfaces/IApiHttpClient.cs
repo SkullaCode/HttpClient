@@ -15,8 +15,7 @@ namespace ApiHttpClient.Interfaces
         IApiHttpClient SetBody(IDictionary<string, string> collection);
         IApiHttpClient SetHeaderParameter(string name, string value);
         IApiHttpClient SetHeader(IDictionary<string, string> collection);
-        IApiHttpClient SetCookieParameter(string name, string value);
-        IApiHttpClient SetCookie(IDictionary<string, string> collection);
+        IApiHttpClient SetCookie(Cookie cookie);
         IApiHttpClient SetFile(string name, FileStream content);
         IApiHttpClient SetRequestMethod(string method);
         IApiHttpClient SetRequestTimeout(int timeout);

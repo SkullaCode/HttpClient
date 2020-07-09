@@ -21,6 +21,7 @@ namespace ApiHttpClient
         protected readonly IDictionary<string, string> _requestHeaders;
         protected readonly IDictionary<string, string> _requestQueryParameters;
         protected readonly IDictionary<string, FileStream> _files;
+        protected readonly ICollection<Cookie> _cookies;
 
         protected ApiHttpClientBase()
         {
@@ -34,6 +35,7 @@ namespace ApiHttpClient
             _requestHeaders = new Dictionary<string, string>();
             _requestQueryParameters = new Dictionary<string, string>();
             _files = new Dictionary<string, FileStream>();
+            _cookies = new List<Cookie>();
         }
 
         public IApiHttpClient SetUrl(string url)
@@ -97,14 +99,10 @@ namespace ApiHttpClient
             return this;
         }
 
-        public IApiHttpClient SetCookieParameter(string name, string value)
+        public IApiHttpClient SetCookie(Cookie cookie)
         {
-            throw new NotImplementedException();
-        }
-
-        public IApiHttpClient SetCookie(IDictionary<string, string> collection)
-        {
-            throw new NotImplementedException();
+           _cookies.Add(cookie);
+           return this;
         }
 
         public IApiHttpClient SetFile(string name, FileStream content)

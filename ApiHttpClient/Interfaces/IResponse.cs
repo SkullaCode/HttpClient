@@ -8,6 +8,9 @@ namespace ApiHttpClient.Interfaces
         string GeHeaderLine(string header);
         ICollection<string> GetHeader(string header);
         bool HasHeader(string header);
+        Cookie GetCookie(string name);
+        ICollection<Cookie> GetCookies();
+        bool HasCookie(string name);
         string GetProtocolVersion();
         Stream GetBodyAsStream();
         string GetBodyAsString();
